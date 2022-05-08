@@ -3,11 +3,9 @@ import { routes } from './routes';
 import cors from 'cors';
 
 const app = express()
-const port = 3000
+const port = 3333
 
-app.use(cors({
-    origin: 'https://localhost:3000'
-})); // segurança para permitir e definir quais os endereços de front-end podem acessar o back.
+app.use(cors()); // segurança para permitir e definir quais os endereços de front-end podem acessar o back.
 app.use(express.json());
 app.use(routes);
 
